@@ -1,13 +1,13 @@
 import wikipedia
 import sys
 
-wikipedia.set_lang("pt")
-
 theme = " ".join(sys.argv[1:])
 
 print(theme)
 
 options = wikipedia.search(theme)
+
+wikipedia.set_lang("pt")
 
 for term in options:
     print(f"[{options.index(term)}] - {term}")
